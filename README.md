@@ -52,6 +52,13 @@ pnpm preview
 
 The workflow in `.github/workflows/deploy.yml` runs on pushes to `main` and manual dispatch. Enable GitHub Pages with GitHub Actions as the source, point DNS at GitHub Pages, and keep `public/CNAME` set to `zurayq.xyz`. The workflow installs dependencies, runs tests, builds, uploads `dist`, and deploys only after success.
 
+Vercel settings:
+
+- Framework Preset: Other
+- Root Directory: ./
+- Build Command: pnpm build
+- Output Directory: dist
+
 ## Content editing
 
 Short structured content lives in `content/*.json`. Personal facts belong in `content/profile.json`; shared page copy and SEO live in `content/site.json`. Templates should stay generic.

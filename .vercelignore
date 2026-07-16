@@ -1,0 +1,12 @@
+.reference-site
+reference-site
+dist
+__pycache__
+.pytest_cache
+.venv
+venv
+node_modules
+*.pyc
+.DS_Store
+README-drafts
+screenshots
