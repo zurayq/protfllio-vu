@@ -1,0 +1,12 @@
+[
+  {"label":"Home","path":"/"},
+  {"label":"Resources","path":"/resources"},
+  {"label":"Projects","path":"/projects"},
+  {"label":"Game Lab","path":"/game-lab"},
+  {"label":"Lore","path":"/random/lore"},
+  {"label":"Toolbox","path":"/random/toolbox"},
+  {"label":"Music","path":"/random/music"},
+  {"label":"Travel","path":"/random/travel"},
+  {"label":"Languages","path":"/random/languages"},
+  {"label":"Wins","path":"/random/wins"}
+]

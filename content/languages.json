@@ -1,0 +1,7 @@
+[
+  {"name":"Arabic","level":"Native","direction":"rtl","note":"My first language, including Libyan Arabic in everyday communication.","sample":"هلا، أنا عبدالواحد"},
+  {"name":"English","level":"Fluent","direction":"ltr","note":"A working and teaching language. I have taught learners from A2 to C2 across different institutes.","sample":"hey, i’m Abdulwahid"},
+  {"name":"Turkish","level":"C1","direction":"ltr","note":"The language of my university life in Türkiye. Reaching C1 was basically a project before the engineering projects started.","sample":"selam, ben Abdulwahid"},
+  {"name":"Italian","level":"A2","direction":"ltr","note":"Still learning, mostly through conversation, curiosity, and refusing to leave the language list alone.","sample":"ciao, sono Abdulwahid"},
+  {"name":"Amazigh","level":"Conversational / B1","direction":"ltr","note":"Part of my language background and still something I want to keep improving.","sample":"","sample_fallback":"sample line coming after i verify the spelling properly"}
+]

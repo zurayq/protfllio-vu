@@ -1,0 +1,24 @@
+{% macro command_panel(command, content_id='', extra_class='') -%}
+<fieldset class="panel {{ extra_class }}"{% if content_id %} aria-labelledby="{{ content_id }}"{% endif %}>
+  <legend{% if content_id %} id="{{ content_id }}"{% endif %}>{{ command }}</legend>
+  {{ caller() }}
+</fieldset>
+{%- endmacro %}
+
+{% macro button(label, path, variant='', disabled=false) -%}
+{% if disabled %}<button class="button {{ variant }}" type="button" disabled>{{ label }}</button>
+{% else %}<a class="button {{ variant }}" href="{{ path }}"{% if path.startswith('http') %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ label }}</a>{% endif %}
+{%- endmacro %}
+
+{% macro project_card(project, ui) -%}
+<article class="project-card" data-filters="{{ project.filters|join(' ') }}">
+  <img src="/assets/generated/{{ project.slug }}.svg" width="1120" height="680" loading="lazy" decoding="async" alt="Diagram-style placeholder artwork for {{ project.title }}">
+  <div>
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.summary }}</p>
+    <p class="meta"><span class="status">{{ project.status }}</span> · {{ project.category }}</p>
+    <p class="stack">{{ project.stack|join(' · ') }}</p>
+  </div>
+  {{ button(ui.view_project, project.route) }}
+</article>
+{%- endmacro %}

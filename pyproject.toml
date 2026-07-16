@@ -1,0 +1,12 @@
+[project]
+name = "zurayq-xyz"
+version = "2.0.0"
+description = "Custom static-site generator for zurayq.xyz"
+requires-python = ">=3.11"
+dependencies = ["Jinja2>=3.1.6,<4", "Markdown>=3.8,<4", "PyYAML>=6.0.2,<7"]
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+package = false

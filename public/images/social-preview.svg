@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img">
+  <title>Abdulwahid Zurayq portfolio social preview</title>
+  <rect width="1200" height="630" fill="#f1ead8"/>
+  <path d="M0 0h30v630H0z" fill="#56613b"/>
+  <path d="M30 0h1170v72H30z" fill="#20231d"/>
+  <path d="M82 123h1036v414H82z" fill="#fffaf0" stroke="#20231d" stroke-width="4"/>
+  <path d="M82 123h1036v62H82z" fill="#dce5b2" stroke="#20231d" stroke-width="4"/>
+  <circle cx="125" cy="154" r="10" fill="#c55f3d"/>
+  <text x="128" y="317" fill="#20231d" font-family="ui-sans-serif,system-ui" font-size="72" font-weight="700" letter-spacing="-3">Abdulwahid Zurayq</text>
+  <text x="132" y="380" fill="#56613b" font-family="ui-monospace,monospace" font-size="27">games · software · interactive systems</text>
+  <path d="M132 442h320v16H132z" fill="#c55f3d"/>
+  <path d="M132 477h188v12H132z" fill="#4a6470"/>
+  <path d="M1040 457h44v44h-44z" fill="#20231d"/>
+</svg>

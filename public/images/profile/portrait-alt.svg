@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" role="img">
+  <title>Alternate portrait placeholder</title>
+  <rect width="720" height="900" fill="#c8dbe0"/>
+  <path d="M0 650 720 760v140H0Z" fill="#4a6470"/>
+  <path d="M72 72h576v720H72z" fill="#fffaf0" stroke="#20231d" stroke-width="5"/>
+  <circle cx="360" cy="310" r="112" fill="#f0c6aa" stroke="#20231d" stroke-width="5"/>
+  <path d="M190 698c28-166 85-244 170-244s142 78 170 244" fill="#56613b" stroke="#20231d" stroke-width="5"/>
+  <path d="M274 309h48m76 0h48" stroke="#20231d" stroke-width="9"/>
+  <path d="M313 377c26-14 68-14 94 0" fill="none" stroke="#20231d" stroke-width="7"/>
+  <path d="M248 565h224l44 95-54 38-30-55H288l-30 55-54-38Z" fill="#20231d"/>
+  <circle cx="300" cy="616" r="20" fill="#dce5b2"/>
+  <path d="M411 602v34m-17-17h34" stroke="#f0c6aa" stroke-width="10"/>
+  <path d="M92 816h120v18H92zM508 100h120v18H508z" fill="#c55f3d"/>
+</svg>

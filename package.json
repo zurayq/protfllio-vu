@@ -1,0 +1,17 @@
+{
+  "name": "zurayq-xyz-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A lightweight static portfolio for Abdulwahid Zurayq.",
+  "scripts": {
+    "dev": "python src/dev_server.py",
+    "build": "python src/build.py --output dist --production",
+    "preview": "python -m http.server 4173 --directory dist",
+    "test": "python -m unittest discover -s tests -v",
+    "check": "python src/validate_content.py && python -m unittest discover -s tests -v"
+  },
+  "devDependencies": { "tailwindcss": "^3.4.17" },
+  "dependencies": { "matter-js": "^0.20.0" },
+  "packageManager": "pnpm@9.15.9",
+  "engines": { "node": ">=20" }
+}

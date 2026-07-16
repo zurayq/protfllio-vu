@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img">
+  <title>CV Bro project placeholder cover</title>
+  <rect width="960" height="600" fill="#f0c6aa"/>
+  <path d="M0 70h960M0 530h960" stroke="#20231d" stroke-width="5"/>
+  <g stroke="#20231d" stroke-width="5">
+    <rect x="90" y="180" width="210" height="240" fill="#fffaf0"/>
+    <rect x="375" y="130" width="210" height="340" fill="#dce5b2"/>
+    <rect x="660" y="180" width="210" height="240" fill="#fffaf0"/>
+    <path d="M300 300h75m210 0h75" fill="none"/>
+    <path d="m352 282 23 18-23 18m285-36 23 18-23 18" fill="none"/>
+  </g>
+  <g fill="#20231d">
+    <circle cx="155" cy="235" r="22"/>
+    <path d="M132 285h126v12H132zm0 34h98v12h-98z"/>
+    <path d="M421 195h118v18H421zm0 54h118v12H421zm0 36h88v12h-88zm0 36h118v12H421zm0 36h72v12h-72z"/>
+  </g>
+  <path d="m714 278 42 42 74-94" fill="none" stroke="#56613b" stroke-width="20"/>
+</svg>

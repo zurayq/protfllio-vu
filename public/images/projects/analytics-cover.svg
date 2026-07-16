@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img">
+  <title>Portfolio Analytics project placeholder cover</title>
+  <rect width="960" height="600" fill="#c8dbe0"/>
+  <rect x="72" y="72" width="816" height="456" fill="#fffaf0" stroke="#20231d" stroke-width="5"/>
+  <path d="M72 152h816M610 152v376" stroke="#20231d" stroke-width="5"/>
+  <g fill="#dce5b2" stroke="#20231d" stroke-width="4">
+    <path d="m123 214 106-25 86 52 95-32 148 82-31 142-160 38-77-63-123 34-58-96Z"/>
+    <circle cx="228" cy="286" r="17" fill="#c55f3d"/>
+    <circle cx="421" cy="346" r="13" fill="#56613b"/>
+    <circle cx="327" cy="388" r="10" fill="#4a6470"/>
+  </g>
+  <g fill="#20231d">
+    <path d="M658 215h168v18H658zm0 47h118v12H658zm0 68h168v18H658zm0 47h138v12H658zm0 68h168v18H658z"/>
+    <circle cx="112" cy="112" r="12"/>
+    <circle cx="150" cy="112" r="12" fill="#c55f3d"/>
+  </g>
+</svg>

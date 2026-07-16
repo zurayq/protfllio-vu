@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f2efe7"/><rect x="40" y="40" width="1120" height="550" fill="#fbfaf6" stroke="#262822" stroke-width="4"/>
+  <rect x="64" y="64" width="1120" height="550" fill="none" stroke="#4d633b" stroke-width="10" opacity=".25"/>
+  <text x="90" y="245" fill="#1c1e1a" font-family="monospace" font-size="72" font-weight="700">Abdulwahid Zurayq</text>
+  <text x="90" y="335" fill="#4d633b" font-family="sans-serif" font-size="44">games, software, and side quests</text>
+  <text x="90" y="505" fill="#6d7067" font-family="monospace" font-size="30">zurayq.xyz</text>
+</svg>

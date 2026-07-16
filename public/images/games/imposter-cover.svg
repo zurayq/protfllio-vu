@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 800" role="img">
+  <title>Imposter project placeholder cover</title>
+  <rect width="1120" height="800" fill="#dce5b2"/>
+  <path d="M0 0h1120v86H0zM0 714h1120v86H0z" fill="#20231d"/>
+  <g stroke="#20231d" stroke-width="6">
+    <g transform="rotate(-8 308 397)">
+      <rect x="128" y="144" width="360" height="506" fill="#fffaf0"/>
+      <circle cx="308" cy="305" r="80" fill="#c8dbe0"/>
+      <path d="M200 532c18-102 54-153 108-153s90 51 108 153" fill="#4a6470"/>
+      <path d="M190 588h236" fill="none"/>
+    </g>
+    <g transform="rotate(7 803 395)">
+      <rect x="622" y="142" width="360" height="506" fill="#20231d"/>
+      <circle cx="802" cy="305" r="80" fill="#c55f3d"/>
+      <path d="M694 532c18-102 54-153 108-153s90 51 108 153" fill="#56613b"/>
+      <path d="M684 588h236" fill="none" stroke="#fffaf0"/>
+      <path d="M752 296h34m34 0h34" stroke="#fffaf0"/>
+    </g>
+  </g>
+  <g fill="#c55f3d" stroke="#20231d" stroke-width="5">
+    <circle cx="550" cy="192" r="36"/>
+    <circle cx="551" cy="611" r="36"/>
+  </g>
+  <path d="M539 178h24v28h-24zM539 596h24v28h-24z" fill="#fffaf0"/>
+</svg>

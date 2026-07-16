@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.venv/
+.uv-cache/
+.pydeps/
+dist/
+test-dist/
+__pycache__/
+*.pyc
+coverage/
+*.log
+.env*
+!.env.example
+.DS_Store
