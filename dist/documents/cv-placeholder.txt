@@ -1,0 +1,10 @@
+CV PLACEHOLDER
+
+This is not Abdulwahid Zurayq's real CV.
+
+TODO:
+1. Add the verified CV as public/documents/abdulwahid-zurayq-cv.pdf
+2. Update profile.links.cv in src/content/profile.ts
+3. Remove this placeholder file
+
+No employment, awards, metrics, email address, or achievements have been invented here.

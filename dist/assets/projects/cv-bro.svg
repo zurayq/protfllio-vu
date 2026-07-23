@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680">
+  <rect width="1120" height="680" fill="#d8d9d2"/><rect x="44" y="42" width="1032" height="596" rx="8" fill="#f8f7f1" stroke="#23251f" stroke-width="4"/>
+  <rect x="44" y="42" width="1032" height="58" fill="#27352d"/><circle cx="80" cy="71" r="8" fill="#c86a57"/><circle cx="104" cy="71" r="8" fill="#d6ad54"/><circle cx="128" cy="71" r="8" fill="#84a56d"/>
+  <text x="173" y="78" fill="#f8f7f1" font-family="monospace" font-size="18" font-weight="700">CV BRO / REVIEW QUEUE</text>
+  <rect x="76" y="132" width="300" height="464" fill="#edf0e8" stroke="#8a9085"/><text x="101" y="170" fill="#23251f" font-family="monospace" font-size="15">COMPANY 042</text>
+  <rect x="101" y="194" width="210" height="14" fill="#566a52"/><rect x="101" y="225" width="240" height="8" fill="#b3b8ae"/><rect x="101" y="244" width="190" height="8" fill="#b3b8ae"/>
+  <rect x="101" y="290" width="238" height="112" fill="#fff" stroke="#a0a59b"/><text x="117" y="321" fill="#4f623e" font-family="monospace" font-size="12">CRITERIA</text><text x="117" y="349" fill="#23251f" font-family="monospace" font-size="13">✓ location match</text><text x="117" y="375" fill="#23251f" font-family="monospace" font-size="13">✓ internship open</text>
+  <rect x="410" y="132" width="634" height="298" fill="#fff" stroke="#8a9085"/><text x="438" y="173" fill="#23251f" font-family="monospace" font-size="16" font-weight="700">DRAFT / HUMAN REVIEW REQUIRED</text>
+  <rect x="438" y="204" width="534" height="9" fill="#c1c4bc"/><rect x="438" y="228" width="566" height="9" fill="#c1c4bc"/><rect x="438" y="252" width="476" height="9" fill="#c1c4bc"/><rect x="438" y="300" width="521" height="9" fill="#c1c4bc"/><rect x="438" y="324" width="435" height="9" fill="#c1c4bc"/>
+  <rect x="410" y="456" width="306" height="140" fill="#e3eadc" stroke="#4f623e"/><text x="438" y="493" fill="#4f623e" font-family="monospace" font-size="13">VERDICT</text><text x="438" y="534" fill="#23251f" font-family="monospace" font-size="25" font-weight="700">REVIEW</text>
+  <rect x="738" y="456" width="306" height="140" fill="#f1e6d7" stroke="#a06c42"/><text x="766" y="493" fill="#a06c42" font-family="monospace" font-size="13">DUPLICATES</text><text x="766" y="534" fill="#23251f" font-family="monospace" font-size="25" font-weight="700">0 FOUND</text>
+</svg>

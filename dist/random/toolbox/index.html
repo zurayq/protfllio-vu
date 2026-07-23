@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}})()</script>
+  <title>Toolbox — Abdulwahid Zurayq</title>
+  <meta name="description" content="An honest inventory of the languages, tools, concepts, and game-development skills Abdulwahid uses or is learning.">
+  <link rel="canonical" href="https://zurayq.xyz/random/toolbox">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Toolbox — Abdulwahid Zurayq">
+  <meta property="og:description" content="An honest inventory of the languages, tools, concepts, and game-development skills Abdulwahid uses or is learning.">
+  <meta property="og:url" content="https://zurayq.xyz/random/toolbox">
+  <meta property="og:image" content="https://zurayq.xyz/assets/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "affiliation": {"@type": "CollegeOrUniversity", "name": "Kocaeli University"}, "homeLocation": {"@type": "Place", "name": "\u0130zmit, Kocaeli, T\u00fcrkiye"}, "name": "Abdulwahid Zurayq", "sameAs": ["https://github.com/zurayq", "https://linkedin.com/in/zurayq"], "url": "https://zurayq.xyz"}</script>
+</head>
+<body class="toolbox-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-name" href="/">Abdulwahid Zurayq</a>
+      <nav class="header-actions" aria-label="Primary">
+        <a class="button button--blue" href="https://linkedin.com/in/zurayq" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <a class="button " href="https://github.com/zurayq" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <a class="button button--accent" href="/game-lab">Game Lab</a>
+
+<span class="header-note" aria-label="CV updating">CV updating</span>        <button class="button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+        </button>
+      </nav>
+    </header>
+    <main id="main" class="site-main"><section class="toolbox-shell" aria-labelledby="toolbox-title">
+  <header class="toolbox-titlebar">
+    <div><span class="toolbox-dot"></span><span class="toolbox-dot"></span><span class="toolbox-dot"></span></div>
+    <h1 id="toolbox-title">toolbox.exe</h1>
+    <span>BUILD 16.4</span>
+  </header>
+  <div class="toolbox-game-layout">
+    <div class="toolbox-board-wrap">
+      <canvas class="toolbox-board" width="320" height="640" data-toolbox-canvas aria-label="Playable ten by twenty falling-block board"></canvas>
+      <div class="toolbox-overlay is-visible" data-toolbox-overlay>
+        <strong data-overlay-title>PRESS START</strong>
+        <span data-overlay-copy>build stack, clear bugs</span>
+        <button class="arcade-button" type="button" data-game-start>start build</button>
+      </div>
+      <div class="line-message" aria-live="polite" data-line-message></div>
+    </div>
+    <aside class="toolbox-hud">
+      <div class="hud-title"><span>toolbox.exe</span><span class="hud-light" aria-hidden="true"></span></div>
+      <div class="hud-stats">
+        <div><span>score</span><strong data-score>000000</strong></div>
+        <div><span>level</span><strong data-level>01</strong></div>
+        <div><span>lines</span><strong data-lines>00</strong></div>
+      </div>
+      <div class="hud-preview-grid">
+        <section><h2>next</h2><canvas width="112" height="88" data-next-canvas aria-label="Next piece preview"></canvas></section>
+        <section><h2>hold</h2><canvas width="112" height="88" data-hold-canvas aria-label="Held piece preview"></canvas></section>
+      </div>
+      <section class="discovered-panel">
+        <h2>discovered <span data-discovered-count>0/16</span></h2>
+        <div class="discovered-tools" data-discovered>
+<span data-tool-name="C#">???</span><span data-tool-name="Java">???</span><span data-tool-name="Python">???</span><span data-tool-name="JavaScript">???</span><span data-tool-name="C">???</span><span data-tool-name="Git">???</span><span data-tool-name="SQL">???</span><span data-tool-name=".NET">???</span><span data-tool-name="FastAPI">???</span><span data-tool-name="Next.js">???</span><span data-tool-name="React">???</span><span data-tool-name="Supabase">???</span><span data-tool-name="Three.js">???</span><span data-tool-name="SDL3">???</span><span data-tool-name="Altium Designer">???</span><span data-tool-name="Unity">???</span>        </div>
+      </section>
+      <div class="toolbox-options">
+        <button type="button" data-game-pause>pause [P]</button>
+        <button type="button" data-game-restart>restart [R]</button>
+        <button type="button" data-game-mute aria-pressed="false">sound: off</button>
+        <button type="button" data-game-ghost aria-pressed="true">ghost: on</button>
+      </div>
+      <details class="toolbox-controls">
+        <summary>controls</summary>
+        <dl><dt>← →</dt><dd>move</dd><dt>↓</dt><dd>soft drop</dd><dt>↑ / X</dt><dd>rotate CW</dd><dt>Z</dt><dd>rotate CCW</dd><dt>Space</dt><dd>hard drop</dd><dt>C</dt><dd>hold</dd></dl>
+      </details>
+    </aside>
+  </div>
+  <div class="mobile-game-controls" aria-label="Touch game controls">
+    <button type="button" data-game-action="left" aria-label="Move left">←</button>
+    <button type="button" data-game-action="right" aria-label="Move right">→</button>
+    <button type="button" data-game-action="rotate" aria-label="Rotate clockwise">↻</button>
+    <button type="button" data-game-action="down" aria-label="Soft drop">↓</button>
+    <button type="button" data-game-action="drop" aria-label="Hard drop">DROP</button>
+    <button type="button" data-game-action="hold">HOLD</button>
+    <button type="button" data-game-action="pause">PAUSE</button>
+  </div>
+  <noscript><p class="arcade-fallback">JavaScript is off. The technology catalog below remains available.</p></noscript>
+  <details class="plain-tool-catalog">
+    <summary>plain technology catalog</summary>
+    <ul><li><strong>C#</strong> — My main direction for .NET desktop work and the language I want to push further into game development.</li><li><strong>Java</strong> — University projects, desktop interfaces, algorithms, and the first tower-defense learning project.</li><li><strong>Python</strong> — Backend prototypes, automation, APIs, data handling, and the occasional script that becomes a whole project.</li><li><strong>JavaScript</strong> — Interactive web work, visualization, browser experiments, and product interfaces.</li><li><strong>C</strong> — Low-level programming, manual memory work, parsing, and graphics fundamentals.</li><li><strong>Git</strong> — Version control for every project that survives beyond the first experiment.</li><li><strong>SQL</strong> — Relational data modeling, queries, and making persistent state less mysterious.</li><li><strong>.NET</strong> — The runtime and tooling behind my current C# desktop work.</li><li><strong>FastAPI</strong> — A practical Python framework for structured API prototypes.</li><li><strong>Next.js</strong> — Product-oriented web applications and interface prototypes; not used to render this static site.</li><li><strong>React</strong> — Component-based interfaces for application work when a static page is not enough.</li><li><strong>Supabase</strong> — Hosted relational data and application services for product prototypes.</li><li><strong>Three.js</strong> — Browser-based 3D scenes and geographic visualization.</li><li><strong>SDL3</strong> — A small graphics and input layer for low-level C experiments.</li><li><strong>Altium Designer</strong> — PCB layout work for an autonomous-vehicle team project.</li><li><strong>Unity</strong> — The main engine currently being explored for C# game-development workflows. This is a learning path, not professional production experience.</li></ul>
+  </details>
+  <script type="application/json" id="toolbox-data">[{"category": "Equipped \u2014 using now", "name": "C#", "short_description": "My main direction for .NET desktop work and the language I want to push further into game development.", "status": "equipped", "used_in": ["Article Network Analysis Tool", "WPF projects", "Current game-development learning path"]}, {"category": "Equipped \u2014 using now", "name": "Java", "short_description": "University projects, desktop interfaces, algorithms, and the first tower-defense learning project.", "status": "equipped", "used_in": ["Retail Sales Category Predictor", "Tower Defense"]}, {"category": "Equipped \u2014 using now", "name": "Python", "short_description": "Backend prototypes, automation, APIs, data handling, and the occasional script that becomes a whole project.", "status": "equipped", "used_in": ["MemoCore", "CV Bro support workflows", "Static-site build tooling"]}, {"category": "Equipped \u2014 using now", "name": "JavaScript", "short_description": "Interactive web work, visualization, browser experiments, and product interfaces.", "status": "equipped", "used_in": ["Pasaporto", "Portfolio projects"]}, {"category": "Equipped \u2014 using now", "name": "C", "short_description": "Low-level programming, manual memory work, parsing, and graphics fundamentals.", "status": "equipped", "used_in": ["LIDAR Scan Visualization"]}, {"category": "Equipped \u2014 using now", "name": "Git", "short_description": "Version control for every project that survives beyond the first experiment.", "status": "equipped", "used_in": ["Project history", "Team workflows"]}, {"category": "Equipped \u2014 using now", "name": "SQL", "short_description": "Relational data modeling, queries, and making persistent state less mysterious.", "status": "equipped", "used_in": ["MemoCore", "CV Bro"]}, {"category": "Equipped \u2014 using now", "name": ".NET", "short_description": "The runtime and tooling behind my current C# desktop work.", "status": "equipped", "used_in": ["Article Network Analysis Tool"]}, {"category": "Equipped \u2014 using now", "name": "FastAPI", "short_description": "A practical Python framework for structured API prototypes.", "status": "equipped", "used_in": ["MemoCore"]}, {"category": "Equipped \u2014 using now", "name": "Next.js", "short_description": "Product-oriented web applications and interface prototypes; not used to render this static site.", "status": "equipped", "used_in": ["CV Bro"]}, {"category": "Equipped \u2014 using now", "name": "React", "short_description": "Component-based interfaces for application work when a static page is not enough.", "status": "equipped", "used_in": ["CV Bro"]}, {"category": "Equipped \u2014 using now", "name": "Supabase", "short_description": "Hosted relational data and application services for product prototypes.", "status": "equipped", "used_in": ["CV Bro"]}, {"category": "Utility belt \u2014 project tools", "name": "Three.js", "short_description": "Browser-based 3D scenes and geographic visualization.", "status": "utility", "used_in": ["Pasaporto"]}, {"category": "Utility belt \u2014 project tools", "name": "SDL3", "short_description": "A small graphics and input layer for low-level C experiments.", "status": "utility", "used_in": ["LIDAR Scan Visualization"]}, {"category": "Utility belt \u2014 project tools", "name": "Altium Designer", "short_description": "PCB layout work for an autonomous-vehicle team project.", "status": "utility", "used_in": ["TAISAT Teknofest Team"]}, {"category": "Incoming \u2014 learning direction", "name": "Unity", "short_description": "The main engine currently being explored for C# game-development workflows. This is a learning path, not professional production experience.", "status": "incoming", "used_in": ["Learning path"]}]</script>
+</section>
+</main>
+  </div>
+  <script src="/assets/scripts/theme.js" defer></script>
+<script src="/assets/scripts/toolbox-game.js" defer></script></body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440">
+  <rect width="720" height="440" fill="#c9d5d1"/><path d="M0 231 106 128l76 67 91-128 112 126 97-96 95 112 68-49 75 75v205H0Z" fill="#778b70"/>
+  <path d="M0 261c107-15 190 21 291 5 132-20 224 9 429-5v179H0Z" fill="#4c8191"/><path d="M0 309c137-12 252 32 372 9 120-24 215 7 348 0v122H0Z" fill="#326d7e"/>
+  <path d="M57 269v-75h86v75M164 269v-111h112v111M303 269v-64h75v64M401 269V143h126v126M558 269v-89h111v89" fill="#e7e9df" stroke="#4d5c53" stroke-width="4"/>
+  <path d="M441 143V79h23v64M447 79q5-18 11 0" fill="#e7e9df" stroke="#4d5c53" stroke-width="4"/>
+  <g fill="#35574b"><circle cx="94" cy="183" r="15"/><rect x="89" y="183" width="10" height="86"/><circle cx="339" cy="189" r="15"/><rect x="334" y="189" width="10" height="80"/></g>
+  <text x="30" y="48" fill="#263e36" font-family="monospace" font-size="18" font-weight="700">İZMİT / 40.7667°N</text>
+</svg>

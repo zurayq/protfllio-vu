@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}})()</script>
+  <title>Imposter — Game Lab — Abdulwahid Zurayq</title>
+  <meta name="description" content="A multilingual phone-passing social-deduction game where everyone receives a secret word except one player. Players ask questions, defend themselves, and vote for whoever seems suspicious.">
+  <link rel="canonical" href="https://zurayq.xyz/game-lab/imposter">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Imposter — Game Lab — Abdulwahid Zurayq">
+  <meta property="og:description" content="A multilingual phone-passing social-deduction game where everyone receives a secret word except one player. Players ask questions, defend themselves, and vote for whoever seems suspicious.">
+  <meta property="og:url" content="https://zurayq.xyz/game-lab/imposter">
+  <meta property="og:image" content="https://zurayq.xyz/assets/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "author": {"@context": "https://schema.org", "@type": "Person", "affiliation": {"@type": "CollegeOrUniversity", "name": "Kocaeli University"}, "homeLocation": {"@type": "Place", "name": "\u0130zmit, Kocaeli, T\u00fcrkiye"}, "name": "Abdulwahid Zurayq", "sameAs": ["https://github.com/zurayq", "https://linkedin.com/in/zurayq"], "url": "https://zurayq.xyz"}, "description": "A multilingual phone-passing social-deduction game where everyone receives a secret word except one player. Players ask questions, defend themselves, and vote for whoever seems suspicious.", "name": "Imposter", "url": "https://zurayq.xyz/game-lab/imposter"}</script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-name" href="/">Abdulwahid Zurayq</a>
+      <nav class="header-actions" aria-label="Primary">
+        <a class="button button--blue" href="https://linkedin.com/in/zurayq" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <a class="button " href="https://github.com/zurayq" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <a class="button button--accent" href="/game-lab">Game Lab</a>
+
+<span class="header-note" aria-label="CV updating">CV updating</span>        <button class="button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+        </button>
+      </nav>
+    </header>
+    <main id="main" class="site-main"><fieldset class="command-section game-detail">
+  <legend>open ~/game-lab/imposter.save</legend>
+  <div class="detail-layout">
+  <article class="detail-content">
+    <h1>Imposter</h1>
+    <img class="detail-cover game-detail-cover" src="/assets/games/imposter-cover.svg" width="800" height="1000" alt="Original cover art for Imposter">
+    <p class="motto">A multilingual phone-passing social-deduction game where everyone receives a secret word except one player. Players ask questions, defend themselves, and vote for whoever seems suspicious.</p>
+    <h2>Status</h2>
+<p>status: in development<br />
+platform: mobile-first<br />
+game type: local social deduction<br />
+players: configurable<br />
+languages: English, Arabic, Turkish</p>
+<h2>Overview</h2>
+<p>players add their names and choose their preferred language. each player privately reveals a role and secret information on the same phone. most players receive the same word. one player receives the Imposter role and has to survive the discussion without knowing the word.</p>
+<p>after the reveal phase, players ask questions, answer carefully, watch for suspicious behavior, and vote. the design goal is to keep setup fast, make secret information hard to reveal accidentally, and let people with different language preferences play together.</p>
+<h2>Design direction</h2>
+<p>the current visual direction uses an old Arabic parchment-book feeling: warm antique paper, restrained interface controls, and a press-and-hold reveal where the page appears to lift or roll from the bottom.</p>
+<h2>Current design principles</h2>
+<ul>
+<li>one phone should be enough</li>
+<li>each player’s language choice should be respected</li>
+<li>private information should require deliberate input</li>
+<li>setup should not feel longer than the game</li>
+<li>the interface should feel playful without becoming visually noisy</li>
+<li>animations should communicate state, not delay the player</li>
+<li>the game should work in English, Arabic, and Turkish from the same content system</li>
+</ul>
+<h2>Available / established direction</h2>
+<ul>
+<li>phone-passing concept</li>
+<li>secret-word and Imposter role structure</li>
+<li>multilingual direction</li>
+<li>player-name setup</li>
+<li>parchment visual theme</li>
+<li>press-and-hold reveal concept</li>
+</ul>
+<h2>In progress</h2>
+<ul>
+<li>reveal interaction</li>
+<li>round flow</li>
+<li>role handoff safety</li>
+<li>question phase</li>
+<li>voting flow</li>
+<li>data structure for translated content</li>
+<li>mobile layout</li>
+</ul>
+<h2>Planned</h2>
+<ul>
+<li>per-player language preference</li>
+<li>configurable rounds</li>
+<li>question prompts</li>
+<li>suspicion hints</li>
+<li>game presets</li>
+<li>replay flow</li>
+<li>sound and haptics with user controls</li>
+<li>playtesting and balance changes</li>
+</ul>
+<h2>What I am solving</h2>
+<p>most local party games assume everyone uses the same language and that passing a phone is automatically private. this project treats both of those as design problems rather than small settings.</p>
+<h2>Current technical direction</h2>
+<p>the final implementation stack is still being decided. C# and game-engine workflows are part of the learning path, but the portfolio must not claim a final engine until the project actually uses one.</p>
+<h2>Devlog — Entry 001: The concept · 2026</h2>
+<p>the first useful version is intentionally local. no accounts, matchmaking, or server infrastructure. the goal is to make the room interaction good before adding anything that makes the project look bigger.</p>
+<h2>Devlog — Entry 002: Language per player · 2026</h2>
+<p>language should belong to the player, not the whole session. one player should be able to reveal the same game state in Arabic while the next uses Turkish or English.</p>
+<h2>Devlog — Entry 003: The reveal problem · 2026</h2>
+<p>tapping once is too easy to do accidentally when the phone is moving between people. the current idea uses press and hold, with the parchment lifting only while the player keeps contact.</p>
+<h2>Devlog — Entry 004: Making it feel physical · 2026</h2>
+<p>the reveal should have weight without becoming a five-second animation. the motion needs to be interruptible, responsive, and clear enough that players understand when information is hidden again.</p>
+<h2>Next checkpoint</h2>
+<p>finish a complete setup-to-vote vertical slice before adding more game modes.</p>
+    <section class="prototype-callout">
+      <span class="eyebrow">INTERACTION STUDY / READY</span>
+      <h2>role reveal, without accidental spoilers</h2>
+      <p>press, hold, reveal, release. a small mechanic that has to feel obvious before it can feel dramatic.</p>
+      <a class="button button--accent" href="/game-lab/role-reveal-demo">try the reveal prototype</a>
+
+    </section>
+  </article>
+  <aside class="detail-sidebar">
+    <div class="eyebrow">status</div><p>In development</p>
+    <div class="eyebrow">platform</div><p>Mobile-first local party game</p>
+    <div class="eyebrow">technology</div><p>Engine and final stack still being decided</p>
+    <a class="button " href="/game-lab">back to game lab</a>
+
+  </aside>
+</div>
+
+</fieldset></main>
+  </div>
+  <script src="/assets/scripts/theme.js" defer></script>
+</body>
+</html>

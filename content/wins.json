@@ -1,10 +1,42 @@
 [
-  {"year":"2021","title":"Helped with Libya’s first National Tech Day","description":"Supported event preparation, participant coordination, and technical arrangements with the Libyan Information Technology Organization."},
-  {"year":"2021–2023","title":"Started mentoring in robotics","description":"Helped students with teamwork, presentations, basic coding, robotics preparation, and competition work through FIRST Tech Challenge activities."},
-  {"year":"2022–2023","title":"Led the Lybotics Asteroids Robotics Team","description":"Took responsibility for planning, task distribution, technical problem solving, and competition preparation."},
-  {"year":"2023","title":"Started Computer Engineering at Kocaeli University","description":"Moved the technical journey into a full degree covering software, systems, algorithms, electronics, and everything in between."},
-  {"year":"2024","title":"Reached C1 Turkish","description":"Finished the language stage that made university life and technical study in Türkiye possible."},
-  {"year":"2025","title":"Contributed to a Teknofest autonomous-vehicle project","description":"Worked on power regulation and PCB layout with the TAISAT embedded-systems team."},
-  {"year":"2026","title":"Built the first CV Bro MVP","description":"Turned the internship-search process into a company-research, filtering, logging, and outreach-review tool."},
-  {"year":"2026","title":"Started building Imposter","description":"Stopped keeping game development as a future plan and began developing a multilingual social-deduction game."}
+  {
+    "year": "2021",
+    "title": "National Tech Day",
+    "description": "Supported event preparation, participant coordination, and technical arrangements for Libya’s first National Tech Day with the Libyan Information Technology Organization."
+  },
+  {
+    "year": "2021–2023",
+    "title": "Robotics Mentor",
+    "description": "Helped students with teamwork, presentations, basic coding, robotics preparation, and FIRST Tech Challenge competition work."
+  },
+  {
+    "year": "2022–2023",
+    "title": "Team Leader",
+    "description": "Led the Lybotics Asteroids Robotics Team through planning, task distribution, technical problem solving, and competition preparation."
+  },
+  {
+    "year": "2023",
+    "title": "Computer Engineering Started",
+    "description": "Began a Computer Engineering degree at Kocaeli University covering software, systems, algorithms, electronics, and the layers between them."
+  },
+  {
+    "year": "2024",
+    "title": "Turkish C1",
+    "description": "Completed the language stage that made university life and technical study in Türkiye possible."
+  },
+  {
+    "year": "2025",
+    "title": "Teknofest Contributor",
+    "description": "Contributed power-regulation and PCB-layout work to the TAISAT autonomous-vehicle team."
+  },
+  {
+    "year": "2026",
+    "title": "CV Bro MVP",
+    "description": "Turned an internship-search workflow into a company-research, filtering, logging, and outreach-review tool."
+  },
+  {
+    "year": "2026",
+    "title": "Game Dev Started",
+    "description": "Stopped keeping game development as a future plan and began building Imposter, a multilingual social-deduction game."
+  }
 ]

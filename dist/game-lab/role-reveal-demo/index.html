@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}})()</script>
+  <title>Role Reveal Prototype — Game Lab — Abdulwahid Zurayq</title>
+  <meta name="description" content="A press-and-hold interaction prototype for the multilingual Imposter party game.">
+  <link rel="canonical" href="https://zurayq.xyz/game-lab/role-reveal-demo">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Role Reveal Prototype — Game Lab — Abdulwahid Zurayq">
+  <meta property="og:description" content="A press-and-hold interaction prototype for the multilingual Imposter party game.">
+  <meta property="og:url" content="https://zurayq.xyz/game-lab/role-reveal-demo">
+  <meta property="og:image" content="https://zurayq.xyz/assets/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "affiliation": {"@type": "CollegeOrUniversity", "name": "Kocaeli University"}, "homeLocation": {"@type": "Place", "name": "\u0130zmit, Kocaeli, T\u00fcrkiye"}, "name": "Abdulwahid Zurayq", "sameAs": ["https://github.com/zurayq", "https://linkedin.com/in/zurayq"], "url": "https://zurayq.xyz"}</script>
+</head>
+<body class="role-demo-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-name" href="/">Abdulwahid Zurayq</a>
+      <nav class="header-actions" aria-label="Primary">
+        <a class="button button--blue" href="https://linkedin.com/in/zurayq" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <a class="button " href="https://github.com/zurayq" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <a class="button button--accent" href="/game-lab">Game Lab</a>
+
+<span class="header-note" aria-label="CV updating">CV updating</span>        <button class="button theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+        </button>
+      </nav>
+    </header>
+    <main id="main" class="site-main"><section class="role-demo-shell" aria-labelledby="role-demo-title">
+  <header class="role-demo-header">
+    <div>
+      <p class="eyebrow">IMPOSTER / INTERACTION PROTOTYPE 01</p>
+      <h1 id="role-demo-title">hold to reveal</h1>
+    </div>
+    <a href="/game-lab/imposter">back to devlog</a>
+  </header>
+  <div class="role-demo-stage">
+    <div class="role-card-frame">
+      <div class="hold-ring" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18"></circle><circle class="hold-progress" cx="22" cy="22" r="18"></circle></svg></div>
+      <button class="role-card" type="button" data-role-card aria-describedby="hold-help" aria-label="Press and hold to reveal your secret role">
+        <span class="role-card-back">
+          <span class="card-sigil" aria-hidden="true">؟</span>
+          <strong>KEEP THIS CARD PRIVATE</strong>
+          <small>press + hold</small>
+        </span>
+        <span class="role-card-secret" aria-hidden="true" data-secret-panel>
+          <span class="secret-label">ROLE</span>
+          <strong data-role-value>PLAYER</strong>
+          <span class="secret-label" data-secret-label>WORD</span>
+          <strong data-secret-value>MOON</strong>
+        </span>
+      </button>
+    </div>
+    <div class="role-demo-copy">
+      <p id="hold-help">hold for 400ms. releasing hides the card immediately. keyboard: hold Space.</p>
+      <p class="role-status" role="status" aria-live="polite" data-role-status>card sealed</p>
+      <div class="mode-switch" aria-label="Prototype role mode">
+        <button class="button is-active" type="button" data-role-mode="player">player</button>
+        <button class="button" type="button" data-role-mode="imposter">imposter</button>
+        <button class="button" type="button" data-role-reset>reset</button>
+      </div>
+      <ul class="prototype-notes">
+        <li>deliberate threshold</li><li>instant hide on release</li><li>touch + keyboard parity</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+  </div>
+  <script src="/assets/scripts/theme.js" defer></script>
+<script src="/assets/scripts/role-reveal.js" defer></script></body>
+</html>

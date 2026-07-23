@@ -2,32 +2,26 @@
 
 The personal portfolio of Abdulwahid Zurayq: a Computer Engineering student from Tripoli, based in İzmit, building games, interactive products, backend tools, and software systems.
 
-## Project overview
-
-The site is a clean personal operating system. Recruiters get a direct professional path through Resources, Projects, and Game Lab; curious visitors get Lore, Toolbox, Music, Travel, Languages, and Wins.
-
-## Design philosophy
-
-The interface mixes a paper notebook, a README, an old utility, and a restrained indie-game menu. It uses warm paper colors, thin square borders, hard shadows, honest project status, and no giant hero, gradients, fake terminal typing, skill percentages, or invented metrics.
-
 ## Architecture
 
 - Python custom static-site generator
-- Jinja templates and macros
+- Dedicated Jinja templates and small shared macros
 - JSON structured content
-- Markdown plus YAML front matter for long project and game case files
+- Markdown plus YAML front matter for project and game case files
 - Tailwind CLI as the production CSS compiler
 - vanilla JavaScript with route-specific loading
 - clean-directory static HTML in `dist/`
 - no React, Next.js, hydration, router, or client state framework
 
+The homepage is deliberately quiet. Toolbox, Music, Travel, Lore, Wins, Languages, Game Lab, and the role-reveal prototype each have a dedicated template, visual system, script, mobile behavior, and reduced-motion path.
+
 ## Installation
 
-Requirements are Node 20+, pnpm 9+, Python 3.11+, and uv.
+Requirements are Node 20+, pnpm 9+, and Python 3.11+.
 
 ```bash
 pnpm install
-uv sync
+python -m pip install -r requirements.txt
 ```
 
 ## Development
@@ -36,81 +30,70 @@ uv sync
 pnpm dev
 ```
 
-This builds the current content and serves `dist/` at `http://127.0.0.1:3000`.
-
 ## Production build
 
 ```bash
-uv run python src/build.py --output dist
 pnpm build
 pnpm preview
 ```
 
-`pnpm build` safely cleans `dist`, validates content, renders HTML, compiles and minifies CSS, creates local SVG placeholders, copies assets, writes sitemap/robots/CNAME, and validates generated internal links.
+The build safely cleans `dist`, validates content, renders dedicated templates, compiles and minifies CSS, copies stable source assets and local vendor libraries, writes sitemap/robots/CNAME, and validates generated internal links. It never generates fake portraits, album art, or per-project placeholders.
 
-## Deployment
-
-The workflow in `.github/workflows/deploy.yml` runs on pushes to `main` and manual dispatch. Enable GitHub Pages with GitHub Actions as the source, point DNS at GitHub Pages, and keep `public/CNAME` set to `zurayq.xyz`. The workflow installs dependencies, runs tests, builds, uploads `dist`, and deploys only after success.
-
-Vercel settings:
+Vercel settings remain:
 
 - Framework Preset: Other
-- Root Directory: ./
-- Build Command: pnpm build
-- Output Directory: dist
+- Build Command: `pnpm build`
+- Output Directory: `dist`
 
-## Content editing
+## Content and routes
 
-Short structured content lives in `content/*.json`. Personal facts belong in `content/profile.json`; shared page copy and SEO live in `content/site.json`. Templates should stay generic.
+Short structured content lives in `content/*.json`. Long project and game files live under `content/projects` and `content/games`. Add every new route to `EXPECTED_ROUTES` in `src/build.py`.
 
-## Adding a project
+Shared document structure stays in `src/templates/layout.html`. Interactive pages use dedicated templates under `src/templates/random` or `src/templates/games`, plus matching scripts under `src/scripts`.
 
-Create `content/projects/<slug>.md` with unique `slug` and `route`, plus `title`, `category`, `filters`, `status`, `summary`, `stack`, `role`, nullable `links`, and the case-file headings used by the existing entries. Add its route to `EXPECTED_ROUTES` in `src/build.py`.
+## Source assets
 
-## Adding a game
+Permanent source art lives under `public/assets`:
 
-Create `content/games/<slug>.md` with the same core metadata plus `platform`, `technology`, `last_updated`, and an honest status. Do not render store or playable links unless a real URL exists.
+- `profile/` contains stable illustrated portrait fallbacks.
+- `projects/` contains six original project covers.
+- `games/` contains the Imposter, Tower Defense, and locked-slot cases.
+- `music/` contains thirteen individual original typographic cards.
+- `travel/` contains two illustrated location cards.
+- `toolbox/` contains the original technology symbol sheet.
+- `world/countries.json` contains local Natural Earth geography.
 
-## Replacing profile photos
+To add real profile photos, place `me.jpg` and `me-alt.jpg` in `public/assets/profile` and update the two image paths in `src/templates/index.html`. Until then, the site uses the clearly labeled illustrated silhouettes. The build never creates or overwrites them.
 
-Add `public/assets/profile/me.jpg` and `public/assets/profile/me-alt.jpg`, then update the image paths in `src/templates/page.html`. Until then, the generator creates clearly labeled 1200×1500 local SVG placeholders. Never replace them with an invented person.
+Replace illustrated project covers with real screenshots when available, update the cover mapping in `src/build.py`, and keep explicit dimensions and descriptive alt text.
 
-## Replacing generated thumbnails
+Place the real CV at `public/assets/documents/Abdulwahid_Zurayq_CV.pdf`. While it is absent, the header says `CV updating` and CV actions are omitted.
 
-Generated covers are written under `dist/assets/generated`. Put permanent real screenshots under `public/assets/projects` or `public/assets/games`, update the matching template/content asset path, and keep explicit dimensions and descriptive alt text.
+## Interactive architecture
 
-## Adding real project links
+Global JavaScript is limited to theme handling.
 
-Set `source` or `live` under the Markdown `links` mapping only after the URL exists publicly. Null links do not render. A repository-wide source link should be configured only after this site has its own public repository URL.
+- Toolbox uses a fixed-step canvas loop, a 10×20 board, seven-bag pieces, hold, ghost, line clearing, levels, scoring, keyboard controls, and touch controls.
+- Music uses the local Matter.js bundle, four walls, pointer constraints, velocity clamping, resizing, pause, tidy, reset, gravity, and static modes.
+- Travel uses local D3, TopoJSON, and Natural Earth data for a draggable orthographic projection with real country outlines and geographic pins.
+- Lore uses a keyboard-accessible file tree with hash-restored selection and copyable links.
+- Wins and Languages use dedicated keyboard-operable selection interfaces.
+- The role-reveal prototype requires a deliberate 400ms hold and hides its secret immediately on release.
 
-## Adding the CV PDF
+The homepage loads none of the heavy interactive libraries.
 
-Place the real file at `public/assets/documents/Abdulwahid_Zurayq_CV.pdf`. The build detects it automatically. While absent, the header says `CV updating` and every CV action is omitted so the site never ships a dead link.
+## Accessibility and tests
 
-## Dark mode
-
-Theme selection uses the `.dark` selector. A tiny head script prevents flash, `theme.js` persists explicit choices as `localStorage.theme`, and system preference updates apply only when no explicit user choice exists.
-
-## Interactive page architecture
-
-Global JavaScript is limited to theme handling. Accordion, portrait, filtering, toolbox, language, travel, and music code load only on routes that need them. Music dynamically loads the local Matter.js bundle and has a static fallback. Travel uses a lightweight local SVG globe with a list fallback. The homepage loads neither.
-
-## Accessibility
-
-The site includes a skip link, semantic landmarks, one h1 per page, logical focus states, keyboard-operated accordions, filters, tabs, and inventory, an Arabic RTL panel, reduced-motion handling, non-hover access to essential information, descriptive image alternatives, mobile target sizes, and static/list fallbacks for experimental pages.
-
-## Performance budgets
-
-The generator tests the homepage HTML against the 90KB budget. CSS is minified in production. Homepage JavaScript stays small and excludes Matter.js, map libraries, Three.js, MathJax, client frameworks, analytics, and autoplay media. SVG placeholders need no raster optimization.
-
-## Tests
+The site provides semantic landmarks, one h1 per page, visible focus states, keyboard control, Arabic RTL, reduced-motion fallbacks, non-hover access to information, descriptive image alternatives, and static/list fallbacks for experimental pages.
 
 ```bash
-uv run python -m unittest discover -s tests -v
+python -m unittest discover -s tests -v
 ```
 
-Tests cover content parsing and counts, unique routes/slugs, generated pages, metadata, headings, internal-link validation, image alternatives, script isolation, production files, and forbidden framework dependencies.
+Tests cover content parsing, expected routes, metadata, headings, internal links, source assets, script isolation, interactive-route contracts, and forbidden framework dependencies.
 
 ## Licensing and attribution
 
-The implementation and original generated visual assets in this repository are licensed under the MIT License; see `LICENSE`. The current v2 generator, templates, writing structure, and interactions are an original implementation. No code or personal assets from the named reference portfolio owners were copied into this rebuild, so the conditional reference attribution text is intentionally not claimed.
+The implementation and original visual assets in this repository are licensed under the MIT License; see `LICENSE`. No code or personal assets from reference portfolio owners were copied.
+
+The local world map is derived from public-domain Natural Earth data through `world-atlas`; details are in `public/assets/world/README.txt`.

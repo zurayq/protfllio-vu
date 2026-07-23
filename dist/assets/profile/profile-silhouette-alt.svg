@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600" role="img">
+  <rect width="480" height="600" fill="#c9d5bd"/>
+  <path d="M0 440 98 361l61 46 96-151 225 206v138H0Z" fill="#2f6591"/>
+  <circle cx="240" cy="210" r="92" fill="#fffefa" stroke="#23251f" stroke-width="5"/>
+  <path d="M105 505c22-112 78-181 135-181s113 69 135 181" fill="#fffefa" stroke="#23251f" stroke-width="5"/>
+  <path d="M165 193c11-73 45-111 83-111 60 0 91 49 91 116-27-21-53-45-71-74-15 32-46 57-103 69Z" fill="#23251f"/>
+  <path d="M198 224q18 15 36 0M269 224q18 15 36 0" fill="none" stroke="#23251f" stroke-width="5" stroke-linecap="round"/>
+  <text x="24" y="40" fill="#23251f" font-family="monospace" font-size="14">ALT PORTRAIT / ALSO TODO</text>
+  <text x="456" y="574" text-anchor="end" fill="#fffefa" font-family="monospace" font-size="12">BLINK MODE</text>
+</svg>

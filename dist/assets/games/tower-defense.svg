@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340">
+  <rect width="560" height="340" fill="#1f2a24"/><g stroke="#394b3f"><path d="M0 68h560M0 136h560M0 204h560M0 272h560M70 0v340M140 0v340M210 0v340M280 0v340M350 0v340M420 0v340M490 0v340"/></g>
+  <path d="M0 170h134v-54h146v108h142v-54h138" fill="none" stroke="#b99b5a" stroke-width="44"/><path d="M0 170h134v-54h146v108h142v-54h138" fill="none" stroke="#e0c879" stroke-width="3" stroke-dasharray="8 9"/>
+  <g><circle cx="112" cy="72" r="31" fill="#547a62" stroke="#c3d4bd" stroke-width="3"/><rect x="102" y="44" width="20" height="56" fill="#2b3c31"/><circle cx="365" cy="274" r="31" fill="#547a62" stroke="#c3d4bd" stroke-width="3"/><rect x="355" y="246" width="20" height="56" fill="#2b3c31"/></g>
+  <g fill="#a64c42"><circle cx="52" cy="170" r="13"/><circle cx="204" cy="116" r="13"/><circle cx="320" cy="224" r="13"/><circle cx="480" cy="170" r="13"/></g>
+  <rect x="20" y="18" width="207" height="46" fill="#111713" stroke="#667568"/><text x="36" y="47" fill="#d9e0d5" font-family="monospace" font-size="16" font-weight="700">TOWER DEFENSE</text>
+  <rect x="458" y="282" width="82" height="38" fill="#d6bd68"/><text x="499" y="306" text-anchor="middle" fill="#1f2a24" font-family="monospace" font-size="13" font-weight="700">JAVA</text>
+</svg>

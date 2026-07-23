@@ -1,7 +1,7 @@
 {
   "pins":[
     {"name":"Tripoli","country":"Libya","coordinates":[13.1913,32.8872],"category":"home","label":"where the story started","description":"My hometown, where I first got involved with English teaching, robotics, and local technology activities."},
-    {"name":"İzmit","country":"Türkiye","coordinates":[29.9167,40.7667],"category":"lived","label":"current save point","description":"Where I currently live while studying Computer Engineering at Kocaeli University and building the next version of everything."}
+    {"name":"İzmit","country":"Türkiye","coordinates":[29.9167,40.7667],"category":"current","label":"current location","description":"Where I currently live while studying Computer Engineering at Kocaeli University and building the next version of everything."}
   ],
   "legend":["home","lived there","visited","bucket list"],
   "fallback":["Tripoli, Libya — home","İzmit, Türkiye — current location"]

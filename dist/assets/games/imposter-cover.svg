@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs><filter id="paper"><feTurbulence baseFrequency=".6" numOctaves="2" stitchTiles="stitch" type="fractalNoise"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .08 0"/></filter></defs>
+  <rect width="800" height="1000" fill="#c9a766"/><rect width="800" height="1000" filter="url(#paper)"/>
+  <rect x="42" y="42" width="716" height="916" fill="none" stroke="#5c4023" stroke-width="7"/><rect x="64" y="64" width="672" height="872" fill="none" stroke="#77562d" stroke-width="2"/>
+  <path d="M93 155q307-119 614 0M93 845q307 119 614 0" fill="none" stroke="#77562d" stroke-width="4"/>
+  <text x="400" y="148" text-anchor="middle" fill="#4b321e" font-family="serif" font-size="42">المُندس</text>
+  <text x="400" y="222" text-anchor="middle" fill="#3d2c1c" font-family="monospace" font-size="66" font-weight="800" letter-spacing="12">IMPOSTER</text>
+  <g transform="translate(230 294)"><rect width="340" height="410" rx="18" fill="#ead39b" stroke="#5c4023" stroke-width="6"/><path d="M170 62c91 0 135 67 135 150 0 96-63 168-135 168S35 308 35 212C35 129 79 62 170 62Z" fill="#273128"/><path d="M100 226q70-74 140 0-15 100-70 126-55-26-70-126Z" fill="#d6b873"/><circle cx="130" cy="198" r="11" fill="#d6b873"/><circle cx="210" cy="198" r="11" fill="#d6b873"/><path d="M140 282q30 20 60 0" fill="none" stroke="#273128" stroke-width="8"/></g>
+  <g fill="#4b321e" font-family="monospace" font-size="20" font-weight="700"><text x="170" y="795">EN</text><text x="390" y="795">AR</text><text x="610" y="795">TR</text></g>
+  <text x="400" y="895" text-anchor="middle" fill="#4b321e" font-family="monospace" font-size="18" letter-spacing="4">ASK · DEFEND · VOTE</text>
+</svg>

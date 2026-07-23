@@ -15,10 +15,10 @@ links: {source: null, live: null}
 ---
 ## Status
 
-status: in development  
-platform: mobile-first  
-game type: local social deduction  
-players: configurable  
+status: in development
+platform: mobile-first
+game type: local social deduction
+players: configurable
 languages: English, Arabic, Turkish
 
 ## Overview
