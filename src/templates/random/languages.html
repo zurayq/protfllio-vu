@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body_class %}languages-page{% endblock %}
+{% block content %}
+<section class="dialogue-shell" aria-labelledby="languages-title">
+  <header class="dialogue-header">
+    <p class="eyebrow">DIALOGUE DATABASE / 5 SLOTS</p>
+    <h1 id="languages-title">choose a voice</h1>
+  </header>
+  <div class="dialogue-layout">
+    <div class="language-slots" role="tablist" aria-label="Languages">
+      {% for lang in languages %}
+      <button type="button" role="tab" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-controls="language-dialogue" data-language="{{ loop.index0 }}">
+        <span class="slot-number">0{{ loop.index }}</span>
+        <span><strong>{{ lang.name }}</strong><small>{{ lang.level }}</small></span>
+        <span class="slot-arrow" aria-hidden="true">▶</span>
+      </button>
+      {% endfor %}
+    </div>
+    <article class="dialogue-window" id="language-dialogue" role="tabpanel" tabindex="0" aria-live="polite">
+      <header><span data-dialogue-language>Arabic</span><span data-dialogue-level>Native</span></header>
+      <div class="dialogue-portrait" aria-hidden="true"><span data-dialogue-initial>ع</span></div>
+      <div class="dialogue-copy" data-dialogue-copy></div>
+      <footer><span>A: select</span><span>B: back</span><span class="typing-cursor" aria-hidden="true">▮</span></footer>
+    </article>
+  </div>
+  <script type="application/json" id="language-data">{{ languages|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/languages.js" defer></script>{% endblock %}

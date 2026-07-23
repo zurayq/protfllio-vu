@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% from 'components/button.html' import button %}
+{% from 'components/fieldset.html' import fieldset %}
+{% block content %}
+{% call fieldset('open ~/projects/' + item.slug + '.md') %}
+<div class="detail-layout">
+  <article class="detail-content">
+    <h1>{{ item.title }}</h1>
+    <img class="detail-cover" src="{{ item.cover }}" width="1120" height="680" alt="Original illustrated cover for {{ item.title }}">
+    <p class="motto">{{ item.summary }}</p>
+    {{ item.content_html|safe }}
+  </article>
+  <aside class="detail-sidebar">
+    <div class="eyebrow">status</div><p>{{ item.status }}</p>
+    <div class="eyebrow">role</div><p>{{ item.role }}</p>
+    <div class="eyebrow">stack</div><p class="stack">{{ item.stack|join(' · ') }}</p>
+    {{ button('back to projects', '/projects') }}
+  </aside>
+</div>
+{% endcall %}
+{% endblock %}

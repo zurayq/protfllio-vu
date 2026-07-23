@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% block body_class %}toolbox-page{% endblock %}
+{% block content %}
+<section class="toolbox-shell" aria-labelledby="toolbox-title">
+  <header class="toolbox-titlebar">
+    <div><span class="toolbox-dot"></span><span class="toolbox-dot"></span><span class="toolbox-dot"></span></div>
+    <h1 id="toolbox-title">toolbox.exe</h1>
+    <span>BUILD 16.4</span>
+  </header>
+  <div class="toolbox-game-layout">
+    <div class="toolbox-board-wrap">
+      <canvas class="toolbox-board" width="320" height="640" data-toolbox-canvas aria-label="Playable ten by twenty falling-block board"></canvas>
+      <div class="toolbox-overlay is-visible" data-toolbox-overlay>
+        <strong data-overlay-title>PRESS START</strong>
+        <span data-overlay-copy>build stack, clear bugs</span>
+        <button class="arcade-button" type="button" data-game-start>start build</button>
+      </div>
+      <div class="line-message" aria-live="polite" data-line-message></div>
+    </div>
+    <aside class="toolbox-hud">
+      <div class="hud-title"><span>toolbox.exe</span><span class="hud-light" aria-hidden="true"></span></div>
+      <div class="hud-stats">
+        <div><span>score</span><strong data-score>000000</strong></div>
+        <div><span>level</span><strong data-level>01</strong></div>
+        <div><span>lines</span><strong data-lines>00</strong></div>
+      </div>
+      <div class="hud-preview-grid">
+        <section><h2>next</h2><canvas width="112" height="88" data-next-canvas aria-label="Next piece preview"></canvas></section>
+        <section><h2>hold</h2><canvas width="112" height="88" data-hold-canvas aria-label="Held piece preview"></canvas></section>
+      </div>
+      <section class="discovered-panel">
+        <h2>discovered <span data-discovered-count>0/16</span></h2>
+        <div class="discovered-tools" data-discovered>
+          {% for tool in toolbox_game_tools %}<span data-tool-name="{{ tool.name }}">???</span>{% endfor %}
+        </div>
+      </section>
+      <div class="toolbox-options">
+        <button type="button" data-game-pause>pause [P]</button>
+        <button type="button" data-game-restart>restart [R]</button>
+        <button type="button" data-game-mute aria-pressed="false">sound: off</button>
+        <button type="button" data-game-ghost aria-pressed="true">ghost: on</button>
+      </div>
+      <details class="toolbox-controls">
+        <summary>controls</summary>
+        <dl><dt>← →</dt><dd>move</dd><dt>↓</dt><dd>soft drop</dd><dt>↑ / X</dt><dd>rotate CW</dd><dt>Z</dt><dd>rotate CCW</dd><dt>Space</dt><dd>hard drop</dd><dt>C</dt><dd>hold</dd></dl>
+      </details>
+    </aside>
+  </div>
+  <div class="mobile-game-controls" aria-label="Touch game controls">
+    <button type="button" data-game-action="left" aria-label="Move left">←</button>
+    <button type="button" data-game-action="right" aria-label="Move right">→</button>
+    <button type="button" data-game-action="rotate" aria-label="Rotate clockwise">↻</button>
+    <button type="button" data-game-action="down" aria-label="Soft drop">↓</button>
+    <button type="button" data-game-action="drop" aria-label="Hard drop">DROP</button>
+    <button type="button" data-game-action="hold">HOLD</button>
+    <button type="button" data-game-action="pause">PAUSE</button>
+  </div>
+  <noscript><p class="arcade-fallback">JavaScript is off. The technology catalog below remains available.</p></noscript>
+  <details class="plain-tool-catalog">
+    <summary>plain technology catalog</summary>
+    <ul>{% for tool in toolbox_game_tools %}<li><strong>{{ tool.name }}</strong> — {{ tool.short_description }}</li>{% endfor %}</ul>
+  </details>
+  <script type="application/json" id="toolbox-data">{{ toolbox_game_tools|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/toolbox-game.js" defer></script>{% endblock %}

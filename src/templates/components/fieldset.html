@@ -1,0 +1,6 @@
+{% macro fieldset(command, extra_class='') -%}
+<fieldset class="command-section {{ extra_class }}">
+  <legend>{{ command }}</legend>
+  {{ caller() }}
+</fieldset>
+{%- endmacro %}

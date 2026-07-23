@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body_class %}lore-page{% endblock %}
+{% block content %}
+<section class="lore-desktop" aria-labelledby="lore-title">
+  <header class="lore-titlebar">
+    <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    <h1 id="lore-title">lore.exe</h1>
+    <button type="button" data-copy-lore>copy link</button>
+  </header>
+  <div class="lore-breadcrumb" data-lore-breadcrumb>life/ / about_me.txt</div>
+  <div class="lore-workspace">
+    <nav class="lore-tree" aria-label="Lore files" data-lore-tree>
+      {% for folder in ['life/','engineering/','games/','languages/','teaching/','robotics/'] %}
+      <div class="tree-folder"><span aria-hidden="true">▾</span> {{ folder }}</div>
+        {% for item in lore if item.folder == folder %}
+        <button type="button" data-lore-file="{{ item.slug }}" aria-selected="{{ 'true' if loop.index0 == 0 and folder == 'life/' else 'false' }}">
+          <span aria-hidden="true">▧</span>{{ item.filename }}
+        </button>
+        {% endfor %}
+      {% endfor %}
+    </nav>
+    <article class="lore-file" tabindex="0" aria-live="polite" aria-label="Selected lore file" data-lore-content>
+      <header><span data-lore-filename>about_me.txt</span><time data-lore-date>modified 2026-07-23</time></header>
+      <div data-lore-body></div>
+    </article>
+  </div>
+  <footer class="lore-statusbar">
+    <span>{{ lore|length }} files</span><span data-lore-status>chapter: life</span><span>UTF-8 · ready</span>
+  </footer>
+  <script type="application/json" id="lore-data">{{ lore|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/lore.js" defer></script>{% endblock %}

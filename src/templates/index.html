@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+{% from 'components/button.html' import button %}
+{% from 'components/fieldset.html' import fieldset %}
+{% from 'components/experience-card.html' import experience_card %}
+{% from 'components/project-card.html' import project_card %}
+{% block body_class %}home-page{% endblock %}
+{% block content %}
+<h1 class="sr-only">Abdulwahid Zurayq — software and game-development portfolio</h1>
+
+{% call fieldset('whoami', 'who-section') %}
+<div class="who-grid">
+  <div class="prose who-copy">
+    <p>heyy, i’m Abdulwahid — a Computer Engineering student at Kocaeli University and an aspiring game developer from Libya, currently based in İzmit.</p>
+    <p>i build software, backend tools, interactive experiments, and increasingly more game systems. right now i’m working on <a href="/game-lab/imposter">Imposter</a>, a multilingual phone-passing social-deduction game.</p>
+    <p>i like projects where i can understand the whole path from data and logic to the thing a player or user actually touches.</p>
+    <p>outside code, i teach English, go to the gym, learn languages, play games, and collect project ideas at a rate that is objectively not sustainable.</p>
+  </div>
+  <figure class="portrait-wrap">
+    <!-- TODO(developer): replace both stable illustrated fallbacks with public/assets/profile/me.jpg and me-alt.jpg. -->
+    <button class="portrait-button" type="button" aria-label="Toggle alternate portrait" aria-pressed="false" data-portrait>
+      <img src="/assets/profile/profile-silhouette.svg" width="480" height="600" alt="Intentional illustrated silhouette placeholder for Abdulwahid’s portrait">
+      <img class="portrait-alt" src="/assets/profile/profile-silhouette-alt.svg" width="480" height="600" alt="" aria-hidden="true">
+    </button>
+    <figcaption class="portrait-note">real photos pending; the silhouette has union rules</figcaption>
+  </figure>
+</div>
+{% endcall %}
+
+{% call fieldset('cat ~/random.md', 'random-section') %}
+<p>the side quests are where the website stops pretending to be normal.</p>
+<nav class="random-grid" aria-label="Interactive side quests">
+  {% for label, path in [('Toolbox','/random/toolbox'),('Music','/random/music'),('Travel','/random/travel'),('Lore','/random/lore'),('Wins','/random/wins'),('Languages','/random/languages')] %}
+  {{ button(label, path) }}
+  {% endfor %}
+</nav>
+<p class="command-note muted">warning: some of these pages are actual toys</p>
+{% endcall %}
+
+{% call fieldset('cat ~/experience.md') %}
+<p class="section-subtitle">selected chapters. the full lore can live somewhere else.</p>
+<div class="experience-grid">
+  {% for entry in featured_experience %}{{ experience_card(entry) }}{% endfor %}
+</div>
+<a class="section-link" href="/random/wins">view the full timeline →</a>
+{% endcall %}
+
+{% call fieldset('ls ~/projects') %}
+<p class="section-subtitle">the ones i would actually defend in an interview.</p>
+<div class="project-list home-projects">
+  {% for project in projects[:3] %}{{ project_card(project, true) }}{% endfor %}
+</div>
+<a class="section-link" href="/projects">view all projects →</a>
+{% endcall %}
+
+{% call fieldset('ls ~/game-lab', 'game-preview-section') %}
+<p class="section-subtitle">where “i want to make games” becomes files that can actually be opened.</p>
+<div class="home-game-grid">
+  <article class="imposter-feature">
+    <div class="game-cover-wrap">
+      <img src="/assets/games/imposter-cover.svg" width="800" height="1000" alt="Original parchment cover for Imposter">
+      <span class="dev-stamp">IN DEVELOPMENT</span>
+    </div>
+    <div>
+      <p class="language-chips" aria-label="Supported languages"><span>EN</span><span>AR</span><span>TR</span></p>
+      <h3>Imposter</h3>
+      <p>a multilingual phone-passing social-deduction game built around secrecy, questions, and suspicious friends.</p>
+      {{ button('open devlog', '/game-lab/imposter', 'button--accent') }}
+    </div>
+  </article>
+  <article class="small-game-card">
+    <img src="/assets/games/tower-defense.svg" width="560" height="340" alt="Original grid illustration for Tower Defense">
+    <h3>Tower Defense</h3>
+    <p>a Java learning project with paths, towers, enemy state, and scoring.</p>
+    {{ button('open project', '/game-lab/tower-defense') }}
+  </article>
+  <article class="small-game-card locked-game">
+    <img src="/assets/games/locked-slot.svg" width="560" height="340" alt="Locked game-library slot">
+    <h3>slot_03.locked</h3>
+    <p>next small idea, currently being prevented from becoming a second full-time job</p>
+  </article>
+</div>
+{% endcall %}
+
+{% call fieldset('cat ~/links.md') %}
+<p>links, because making people search for them would be weird.</p>
+<div class="button-row">
+  {{ button('email', 'mailto:' + profile.email) }}
+  {{ button('LinkedIn', profile.linkedin, 'button--blue') }}
+  {{ button('GitHub', profile.github) }}
+  {{ button('resources', '/resources') }}
+</div>
+{% endcall %}
+{% endblock %}
+{% block footer %}
+<footer class="site-footer">
+  <span>built by Abdulwahid Zurayq · static HTML · zero giant framework</span>
+</footer>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/portrait.js" defer></script>{% endblock %}

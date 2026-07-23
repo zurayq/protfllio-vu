@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680">
+  <rect width="1120" height="680" fill="#10141a"/><g fill="#78d5c5"><circle cx="156" cy="421" r="4"/><circle cx="180" cy="397" r="3"/><circle cx="204" cy="365" r="5"/><circle cx="240" cy="352" r="4"/><circle cx="276" cy="325" r="3"/><circle cx="319" cy="309" r="5"/><circle cx="365" cy="282" r="3"/><circle cx="412" cy="273" r="4"/><circle cx="466" cy="255" r="5"/><circle cx="524" cy="247" r="4"/><circle cx="577" cy="261" r="3"/><circle cx="638" cy="280" r="5"/><circle cx="690" cy="302" r="3"/><circle cx="744" cy="339" r="5"/><circle cx="790" cy="371" r="4"/><circle cx="842" cy="405" r="3"/><circle cx="902" cy="438" r="5"/></g>
+  <g stroke="#384a4d" stroke-width="1"><path d="M560 574 120 450M560 574 1000 450M560 574V106"/><path d="M180 478h760M250 502h620M340 528h440"/><circle cx="560" cy="574" r="120" fill="none"/><circle cx="560" cy="574" r="240" fill="none"/><circle cx="560" cy="574" r="360" fill="none"/></g>
+  <path d="M560 574 466 255" stroke="#d4af52" stroke-width="3"/><circle cx="560" cy="574" r="12" fill="#d4af52"/>
+  <rect x="54" y="48" width="316" height="110" fill="#171e25" stroke="#405a5d"/><text x="78" y="84" fill="#78d5c5" font-family="monospace" font-size="13">LIDAR / POINT CLOUD</text><text x="78" y="121" fill="#fff" font-family="monospace" font-size="22" font-weight="700">4,812 POINTS</text>
+  <text x="1060" y="625" text-anchor="end" fill="#78d5c5" font-family="monospace" font-size="13">C + SDL3 / LIVE VIEW</text>
+</svg>

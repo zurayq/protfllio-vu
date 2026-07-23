@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" viewBox="0 0 560 340">
+  <rect width="560" height="340" fill="#d8d5cc"/><path d="M0 0 560 340M560 0 0 340" stroke="#b4b0a5" stroke-width="2"/>
+  <rect x="207" y="125" width="146" height="116" fill="#ece9df" stroke="#555850" stroke-width="4"/><path d="M238 125V96c0-58 84-58 84 0v29" fill="none" stroke="#555850" stroke-width="15"/>
+  <circle cx="280" cy="174" r="14" fill="#555850"/><path d="M280 184v31" stroke="#555850" stroke-width="11"/>
+  <text x="280" y="285" text-anchor="middle" fill="#555850" font-family="monospace" font-size="14" font-weight="700">SLOT_03.LOCKED</text>
+</svg>

@@ -42,6 +42,42 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn("matter.min.js", text.lower())
         self.assertNotIn("d3", text.lower())
         self.assertIsNone(re.search(r"<script[^>]+(?:three|d3|matter)", text, re.I))
+        self.assertNotIn("for-visitors", text)
+        self.assertNotIn("current-quest", text)
+        self.assertEqual(4, text.count('class="experience-card"'))
+        self.assertEqual(3, text.count('class="project-card project-card--compact"'))
+
+    def test_interactive_route_contracts(self):
+        toolbox = output_path(self.out, "/random/toolbox").read_text(encoding="utf-8")
+        music = output_path(self.out, "/random/music").read_text(encoding="utf-8")
+        travel = output_path(self.out, "/random/travel").read_text(encoding="utf-8")
+        lore = output_path(self.out, "/random/lore").read_text(encoding="utf-8")
+        role = output_path(self.out, "/game-lab/role-reveal-demo").read_text(encoding="utf-8")
+        self.assertIn('data-toolbox-canvas', toolbox)
+        self.assertIn('/assets/scripts/toolbox-game.js', toolbox)
+        self.assertIn('/assets/vendor/matter.min.js', music)
+        self.assertIn('data-music-stage', music)
+        self.assertIn('/assets/vendor/d3.min.js', travel)
+        self.assertIn('/assets/world/countries.json', (ROOT / "src" / "scripts" / "travel-globe.js").read_text(encoding="utf-8"))
+        self.assertIn('data-lore-tree', lore)
+        self.assertIn('data-role-card', role)
+        self.assertIn('/assets/scripts/role-reveal.js', role)
+
+    def test_source_art_is_copied_not_generated(self):
+        self.assertFalse((self.out / "assets" / "generated").exists())
+        expected = [
+            "assets/profile/profile-silhouette.svg",
+            "assets/projects/cv-bro.svg",
+            "assets/projects/memocore.svg",
+            "assets/projects/pasaporto.svg",
+            "assets/games/imposter-cover.svg",
+            "assets/music/artist-13.svg",
+            "assets/travel/tripoli.svg",
+            "assets/world/countries.json",
+        ]
+        for asset in expected:
+            with self.subTest(asset=asset):
+                self.assertTrue((self.out / asset).exists())
 
     def test_metadata_files(self):
         self.assertEqual("zurayq.xyz", (self.out / "CNAME").read_text().strip())

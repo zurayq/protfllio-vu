@@ -1,6 +1,10 @@
 (() => {
   const portrait = document.querySelector('[data-portrait]');
   if (!portrait) return;
-  portrait.addEventListener('click', () => portrait.classList.toggle('is-alt'));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') portrait.classList.remove('is-alt'); });
+  const setAlt = active => {
+    portrait.classList.toggle('is-alt', active);
+    portrait.setAttribute('aria-pressed', String(active));
+  };
+  portrait.addEventListener('click', () => setAlt(!portrait.classList.contains('is-alt')));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setAlt(false); });
 })();

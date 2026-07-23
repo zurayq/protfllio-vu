@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block body_class %}role-demo-page{% endblock %}
+{% block content %}
+<section class="role-demo-shell" aria-labelledby="role-demo-title">
+  <header class="role-demo-header">
+    <div>
+      <p class="eyebrow">IMPOSTER / INTERACTION PROTOTYPE 01</p>
+      <h1 id="role-demo-title">hold to reveal</h1>
+    </div>
+    <a href="/game-lab/imposter">back to devlog</a>
+  </header>
+  <div class="role-demo-stage">
+    <div class="role-card-frame">
+      <div class="hold-ring" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18"></circle><circle class="hold-progress" cx="22" cy="22" r="18"></circle></svg></div>
+      <button class="role-card" type="button" data-role-card aria-describedby="hold-help" aria-label="Press and hold to reveal your secret role">
+        <span class="role-card-back">
+          <span class="card-sigil" aria-hidden="true">؟</span>
+          <strong>KEEP THIS CARD PRIVATE</strong>
+          <small>press + hold</small>
+        </span>
+        <span class="role-card-secret" aria-hidden="true" data-secret-panel>
+          <span class="secret-label">ROLE</span>
+          <strong data-role-value>PLAYER</strong>
+          <span class="secret-label" data-secret-label>WORD</span>
+          <strong data-secret-value>MOON</strong>
+        </span>
+      </button>
+    </div>
+    <div class="role-demo-copy">
+      <p id="hold-help">hold for 400ms. releasing hides the card immediately. keyboard: hold Space.</p>
+      <p class="role-status" role="status" aria-live="polite" data-role-status>card sealed</p>
+      <div class="mode-switch" aria-label="Prototype role mode">
+        <button class="button is-active" type="button" data-role-mode="player">player</button>
+        <button class="button" type="button" data-role-mode="imposter">imposter</button>
+        <button class="button" type="button" data-role-reset>reset</button>
+      </div>
+      <ul class="prototype-notes">
+        <li>deliberate threshold</li><li>instant hide on release</li><li>touch + keyboard parity</li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/role-reveal.js" defer></script>{% endblock %}

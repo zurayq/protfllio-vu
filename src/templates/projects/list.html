@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% from 'components/fieldset.html' import fieldset %}
+{% from 'components/project-card.html' import project_card %}
+{% block content %}
+{% call fieldset(page.command) %}
+<h1>projects</h1>
+<p>{{ page.intro }}</p>
+<div class="filter-row" aria-label="Project filters">
+  {% for label in site.ui.filters %}
+  <button class="button" type="button" data-filter="{{ label }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ label }}</button>
+  {% endfor %}
+</div>
+<div class="project-list" data-project-list>
+  {% for project in projects %}{{ project_card(project) }}{% endfor %}
+</div>
+{% endcall %}
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/project-filter.js" defer></script>{% endblock %}

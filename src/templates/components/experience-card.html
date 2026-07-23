@@ -1,0 +1,11 @@
+{% macro experience_card(entry) -%}
+<article class="experience-card">
+  <span class="badge" aria-hidden="true">{{ entry.badge }}</span>
+  <div class="experience-copy">
+    <h3>{{ entry.organization }}</h3>
+    <p class="experience-role">{{ entry.role }}</p>
+    <p>{{ entry.summary }}</p>
+  </div>
+  <time>{{ entry.date }}</time>
+</article>
+{%- endmacro %}

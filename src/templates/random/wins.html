@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body_class %}wins-page{% endblock %}
+{% block content %}
+<section class="wins-cabinet" aria-labelledby="wins-title">
+  <header class="wins-header">
+    <div><p class="eyebrow">PROFILE 01 / SAVE DATA</p><h1 id="wins-title">achievements</h1></div>
+    <div class="achievement-score"><strong>{{ wins|length }}</strong><span>earned</span></div>
+  </header>
+  <div class="wins-layout">
+    <div class="achievement-grid" role="listbox" aria-label="Earned achievements">
+      {% set icons = ['⌁','⚙','◇','▦','あ','⌁','✓','▶'] %}
+      {% for item in wins %}
+      <button class="achievement-plaque plaque-{{ loop.index }}" type="button" role="option" aria-selected="{{ 'true' if loop.first else 'false' }}" data-win-index="{{ loop.index0 }}">
+        <span class="achievement-icon" aria-hidden="true">{{ icons[loop.index0] }}</span>
+        <span class="achievement-name">{{ item.title }}</span>
+        <time>{{ item.year }}</time>
+      </button>
+      {% endfor %}
+      <div class="achievement-plaque future-slot" aria-label="Future achievement, locked"><span class="achievement-icon">?</span><span>future slot</span><time>LOCKED</time></div>
+    </div>
+    <article class="achievement-detail" aria-live="polite" data-win-detail>
+      <p class="eyebrow">ACHIEVEMENT 01 / UNLOCKED</p>
+      <div class="large-achievement-icon" aria-hidden="true">⌁</div>
+      <h2>{{ wins[0].title }}</h2>
+      <time>{{ wins[0].year }}</time>
+      <p>{{ wins[0].description }}</p>
+      <div class="save-flags"><span>truthful</span><span>earned</span><span>saved</span></div>
+    </article>
+  </div>
+  <script type="application/json" id="wins-data">{{ wins|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/wins.js" defer></script>{% endblock %}

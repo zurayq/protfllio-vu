@@ -17,5 +17,8 @@ class RouteTests(unittest.TestCase):
     def test_internal_routes_have_no_html_suffix(self):
         self.assertTrue(all(not route.endswith(".html") for route in EXPECTED_ROUTES))
 
+    def test_role_reveal_demo_is_validated(self):
+        self.assertIn("/game-lab/role-reveal-demo", EXPECTED_ROUTES)
+
 
 if __name__ == "__main__": unittest.main()

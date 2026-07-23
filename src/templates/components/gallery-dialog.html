@@ -1,0 +1,6 @@
+{% macro gallery_dialog(dialog_id='gallery-dialog') -%}
+<dialog class="gallery-dialog" id="{{ dialog_id }}" aria-label="Image gallery">
+  <button class="button gallery-close" type="button" data-dialog-close>close</button>
+  <div data-dialog-content></div>
+</dialog>
+{%- endmacro %}

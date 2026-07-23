@@ -1,0 +1,7 @@
+{% macro button(label, path, variant='', disabled=false) -%}
+{% if disabled %}
+<button class="button {{ variant }}" type="button" disabled>{{ label }}</button>
+{% else %}
+<a class="button {{ variant }}" href="{{ path }}"{% if path.startswith('http') %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ label }}</a>
+{% endif %}
+{%- endmacro %}

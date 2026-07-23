@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160">
+  <rect width="640" height="160" fill="#111711"/>
+  <g font-family="monospace" font-size="18" font-weight="700" text-anchor="middle">
+    <g fill="#a8d26d"><rect x="10" y="10" width="60" height="60"/><rect x="90" y="10" width="60" height="60"/><rect x="170" y="10" width="60" height="60"/><rect x="250" y="10" width="60" height="60"/></g>
+    <g fill="#66a5a0"><rect x="330" y="10" width="60" height="60"/><rect x="410" y="10" width="60" height="60"/><rect x="490" y="10" width="60" height="60"/><rect x="570" y="10" width="60" height="60"/></g>
+    <g fill="#d89859"><rect x="10" y="90" width="60" height="60"/><rect x="90" y="90" width="60" height="60"/><rect x="170" y="90" width="60" height="60"/><rect x="250" y="90" width="60" height="60"/></g>
+    <g fill="#9f83bd"><rect x="330" y="90" width="60" height="60"/><rect x="410" y="90" width="60" height="60"/><rect x="490" y="90" width="60" height="60"/><rect x="570" y="90" width="60" height="60"/></g>
+    <g fill="#111711"><text x="40" y="48">C#</text><text x="120" y="48">JV</text><text x="200" y="48">PY</text><text x="280" y="48">JS</text><text x="360" y="48">C</text><text x="440" y="48">GT</text><text x="520" y="48">SQL</text><text x="600" y="48">.N</text><text x="40" y="128">FA</text><text x="120" y="128">NX</text><text x="200" y="128">RE</text><text x="280" y="128">SB</text><text x="360" y="128">3J</text><text x="440" y="128">SD</text><text x="520" y="128">AL</text><text x="600" y="128">UN</text></g>
+  </g>
+</svg>

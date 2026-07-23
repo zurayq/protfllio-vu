@@ -1,22 +1,25 @@
-{% from 'components.html' import button %}
+{% from 'components/button.html' import button %}
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')}catch(e){}})()</script>
   <title>{{ meta.title }}</title>
   <meta name="description" content="{{ meta.description }}">
   <link rel="canonical" href="{{ site.domain }}{{ route if route != '/' else '/' }}">
-  <meta property="og:type" content="website"><meta property="og:title" content="{{ meta.title }}"><meta property="og:description" content="{{ meta.description }}"><meta property="og:url" content="{{ site.domain }}{{ route }}"><meta property="og:image" content="{{ site.domain }}/assets/og-default.svg">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{{ meta.title }}"><meta name="twitter:description" content="{{ meta.description }}"><meta name="twitter:image" content="{{ site.domain }}/assets/og-default.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.description }}">
+  <meta property="og:url" content="{{ site.domain }}{{ route }}">
+  <meta property="og:image" content="{{ site.domain }}/assets/og-default.svg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">{{ json_ld|tojson }}</script>
+  {% block page_head %}{% endblock %}
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
   <a class="skip-link" href="#main">{{ site.ui.skip }}</a>
   <div class="site-shell">
     <header class="site-header">
@@ -25,13 +28,16 @@
         {{ button('LinkedIn', profile.linkedin, 'button--blue') }}
         {{ button('GitHub', profile.github) }}
         {{ button('Game Lab', '/game-lab', 'button--accent') }}
-        {% if cv_exists %}{{ button('CV', profile.cv_path) }}{% else %}<span class="meta muted" aria-label="{{ site.ui.cv_updating }}">{{ site.ui.cv_updating }}</span>{% endif %}
-        <button class="button theme-toggle" type="button" data-theme-toggle aria-label="{{ site.ui.switch_dark }}"><span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span></button>
+        {% if cv_exists %}{{ button('CV', profile.cv_path) }}{% else %}<span class="header-note" aria-label="{{ site.ui.cv_updating }}">CV updating</span>{% endif %}
+        <button class="button theme-toggle" type="button" data-theme-toggle aria-label="{{ site.ui.switch_dark }}">
+          <span class="moon" aria-hidden="true">☾</span><span class="sun" aria-hidden="true">☀</span>
+        </button>
       </nav>
     </header>
     <main id="main" class="site-main">{% block content %}{% endblock %}</main>
+    {% block footer %}{% endblock %}
   </div>
   <script src="/assets/scripts/theme.js" defer></script>
-  {% for script in scripts %}<script src="/assets/scripts/{{ script }}" defer></script>{% endfor %}
+  {% block page_scripts %}{% endblock %}
 </body>
 </html>

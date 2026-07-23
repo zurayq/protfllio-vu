@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% from 'components/button.html' import button %}
+{% from 'components/fieldset.html' import fieldset %}
+{% block content %}
+{% call fieldset('open ~/game-lab/' + item.slug + '.save', 'game-detail') %}
+<div class="detail-layout">
+  <article class="detail-content">
+    <h1>{{ item.title }}</h1>
+    <img class="detail-cover game-detail-cover" src="{{ item.cover }}" width="800" height="1000" alt="Original cover art for {{ item.title }}">
+    <p class="motto">{{ item.summary }}</p>
+    {{ item.content_html|safe }}
+    {% if item.slug == 'imposter' %}
+    <section class="prototype-callout">
+      <span class="eyebrow">INTERACTION STUDY / READY</span>
+      <h2>role reveal, without accidental spoilers</h2>
+      <p>press, hold, reveal, release. a small mechanic that has to feel obvious before it can feel dramatic.</p>
+      {{ button('try the reveal prototype', '/game-lab/role-reveal-demo', 'button--accent') }}
+    </section>
+    {% endif %}
+  </article>
+  <aside class="detail-sidebar">
+    <div class="eyebrow">status</div><p>{{ item.status }}</p>
+    <div class="eyebrow">platform</div><p>{{ item.platform }}</p>
+    <div class="eyebrow">technology</div><p>{{ item.technology }}</p>
+    {{ button('back to game lab', '/game-lab') }}
+  </aside>
+</div>
+{% endcall %}
+{% endblock %}

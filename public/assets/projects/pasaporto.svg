@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680">
+  <defs><radialGradient id="space"><stop stop-color="#26354b"/><stop offset="1" stop-color="#080b12"/></radialGradient><radialGradient id="globe"><stop stop-color="#476d85"/><stop offset="1" stop-color="#182b38"/></radialGradient></defs>
+  <rect width="1120" height="680" fill="url(#space)"/><g fill="#fff" opacity=".5"><circle cx="100" cy="98" r="2"/><circle cx="230" cy="552" r="2"/><circle cx="884" cy="118" r="2"/><circle cx="1030" cy="470" r="2"/><circle cx="710" cy="600" r="2"/></g>
+  <circle cx="540" cy="347" r="242" fill="url(#globe)" stroke="#8db1c1" stroke-width="3"/>
+  <path d="M303 321c72-43 133-48 171-22 27 19 57 39 107 20 58-22 104-61 193-27M311 412c70-17 125-1 175 30 72 46 143 43 267-2M540 106c-77 88-95 174-82 254 11 76 39 154 82 229M540 106c83 89 101 174 85 254-13 72-42 151-85 229" fill="none" stroke="#82a5b6" stroke-width="2" opacity=".55"/>
+  <path d="M425 246c30-41 70-70 111-76l45 42-19 39 39 31-36 42-76-5-42-32Z" fill="#86a071"/><path d="M597 336c48-11 94 6 132 37l-22 49-56 4-18 65-48 25-31-78Z" fill="#799369"/>
+  <path d="M494 284C654 184 771 200 878 131" fill="none" stroke="#e1b85a" stroke-width="4" stroke-dasharray="10 10"/><circle cx="494" cy="284" r="9" fill="#e1b85a"/><circle cx="878" cy="131" r="9" fill="#e1b85a"/>
+  <rect x="58" y="54" width="304" height="132" fill="#111925" stroke="#66869b"/><text x="83" y="89" fill="#8db1c1" font-family="monospace" font-size="13">PASAPORTO / ROUTE</text><text x="83" y="127" fill="#fff" font-family="monospace" font-size="25" font-weight="700">LBA → GLOBAL</text><text x="83" y="158" fill="#a9bac5" font-family="monospace" font-size="12">VISA MOBILITY VISUALIZED</text>
+  <text x="1062" y="631" text-anchor="end" fill="#8db1c1" font-family="monospace" font-size="13">THREE.JS / WEBGL</text>
+</svg>

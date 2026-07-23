@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body_class %}travel-page{% endblock %}
+{% block content %}
+<section class="travel-shell" aria-labelledby="travel-title">
+  <header class="travel-header">
+    <div><p class="eyebrow">COORDINATE LOG / 02 CONFIRMED</p><h1 id="travel-title">travel.exe</h1></div>
+    <div class="travel-controls">
+      <button type="button" data-reset-globe>reset view</button>
+      <button type="button" data-zoom="-1" aria-label="Zoom out">−</button>
+      <button type="button" data-zoom="1" aria-label="Zoom in">+</button>
+      <button type="button" data-auto-rotate aria-pressed="false">auto: off</button>
+    </div>
+  </header>
+  <div class="travel-grid">
+    <div class="globe-wrap" data-globe-wrap>
+      <canvas class="globe-canvas" data-globe width="680" height="680" role="img" aria-label="Orthographic globe with real country outlines and location pins"></canvas>
+      <div class="globe-tooltip" role="tooltip" data-globe-tooltip hidden></div>
+      <span class="globe-instruction">drag to rotate · wheel or pinch to zoom</span>
+    </div>
+    <aside class="travel-console">
+      <div class="coordinate-readout"><span>VIEW</span><strong data-view-coordinates>26.0°E / 37.0°N</strong></div>
+      <div class="location-buttons" role="listbox" aria-label="Confirmed locations">
+        {% for pin in travel.pins %}
+        <button type="button" role="option" aria-selected="{{ 'true' if loop.first else 'false' }}" data-location-index="{{ loop.index0 }}">
+          <span class="pin-key pin-key--{{ pin.category }}"></span>
+          <span><strong>{{ pin.name }}, {{ pin.country }}</strong><small>{{ pin.category }} · {{ pin.coordinates[1] }}, {{ pin.coordinates[0] }}</small></span>
+        </button>
+        {% endfor %}
+      </div>
+      <article class="selected-location" data-selected-location aria-live="polite">
+        <p class="eyebrow">HOME / 32.8872°N 13.1913°E</p>
+        <h2>Tripoli, Libya</h2>
+        <p>{{ travel.pins[0].description }}</p>
+      </article>
+      <p class="map-credit">geography: Natural Earth · rendered locally with D3</p>
+    </aside>
+  </div>
+  <div class="travel-photo-strip" aria-label="Illustrated location cards">
+    <article><img src="/assets/travel/tripoli.svg" width="720" height="440" alt="Original illustrated view of Tripoli"><div><strong>Tripoli</strong><span>the beginning of the route</span></div></article>
+    <article><img src="/assets/travel/izmit.svg" width="720" height="440" alt="Original illustrated view of İzmit"><div><strong>İzmit</strong><span>current save point</span></div></article>
+  </div>
+  <noscript><ul>{% for line in travel.fallback %}<li>{{ line }}</li>{% endfor %}</ul></noscript>
+  <script type="application/json" id="travel-data">{{ travel.pins|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}
+<script src="/assets/vendor/d3.min.js" defer></script>
+<script src="/assets/vendor/topojson-client.min.js" defer></script>
+<script src="/assets/scripts/travel-globe.js" defer></script>
+{% endblock %}

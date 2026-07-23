@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body_class %}music-page{% endblock %}
+{% block content %}
+<section class="music-shell" aria-labelledby="music-title">
+  <header class="utility-titlebar">
+    <div><p class="eyebrow">AUDIO ARCHIVE / NO AUTOPLAY</p><h1 id="music-title">music.exe</h1></div>
+    <div class="music-controls">
+      <button type="button" data-music-pause>pause</button>
+      <button type="button" data-music-reset>reset</button>
+      <button type="button" data-music-tidy>tidy</button>
+      <button type="button" data-music-gravity aria-pressed="true">gravity: on</button>
+      <button type="button" data-music-static>static</button>
+    </div>
+  </header>
+  <div class="music-stage" data-music-stage aria-label="Bounded draggable music-card physics scene">
+    <div class="music-cards static" role="listbox" aria-label="Artists">
+      {% for artist in music.artists %}
+      <button class="music-card card-shape-{{ loop.index0 % 4 }} card-palette-{{ loop.index0 % 7 }}" type="button" role="option" aria-selected="false" data-artist="{{ artist }}">
+        <img src="/assets/music/artist-{{ '%02d'|format(loop.index) }}.svg" width="264" height="192" alt="Original typographic music card for {{ artist }}">
+      </button>
+      {% endfor %}
+    </div>
+    <aside class="music-hud" data-music-hud aria-live="polite">
+      <span class="eyebrow">SELECT A RECORD</span>
+      <strong>drag anything. autoplay nothing.</strong>
+    </aside>
+  </div>
+  <p class="music-help">drag with pointer or touch · use arrow keys to select · cards stay inside the case</p>
+  <ul class="static-music-fallback">{% for artist in music.artists %}<li>{{ artist }}</li>{% endfor %}</ul>
+  <script type="application/json" id="music-data">{{ music.physics|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}
+<script src="/assets/vendor/matter.min.js" defer></script>
+<script src="/assets/scripts/music-physics.js" defer></script>
+{% endblock %}

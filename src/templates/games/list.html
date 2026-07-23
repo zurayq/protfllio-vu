@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% from 'components/button.html' import button %}
+{% block body_class %}game-library-page{% endblock %}
+{% block content %}
+<section class="library-shell" aria-labelledby="library-title">
+  <header class="library-titlebar">
+    <div>
+      <p class="eyebrow">LOCAL LIBRARY / 2 INSTALLED</p>
+      <h1 id="library-title">game lab</h1>
+    </div>
+    <span class="library-led" aria-hidden="true"></span>
+  </header>
+  <div class="library-stage">
+    <div class="game-shelf" role="listbox" aria-label="Game library" data-game-shelf>
+      <button class="game-case is-selected" type="button" role="option" aria-selected="true" data-game-index="0">
+        <img src="/assets/games/imposter-cover.svg" width="400" height="500" alt="Imposter parchment game case">
+        <span>IMPOSTER</span>
+      </button>
+      <button class="game-case" type="button" role="option" aria-selected="false" data-game-index="1">
+        <img src="/assets/games/tower-defense.svg" width="560" height="340" alt="Tower Defense grid game case">
+        <span>TOWER DEFENSE</span>
+      </button>
+      <button class="game-case locked" type="button" role="option" aria-selected="false" data-game-index="2">
+        <img src="/assets/games/locked-slot.svg" width="560" height="340" alt="Locked empty game case">
+        <span>SLOT_03</span>
+      </button>
+    </div>
+    <div class="shelf-edge" aria-hidden="true"></div>
+    <aside class="library-detail" aria-live="polite" data-library-detail>
+      <p class="eyebrow">SELECTED / 01</p>
+      <h2>Imposter</h2>
+      <p>a multilingual phone-passing social-deduction game about questions, bluffing, and a card nobody should see.</p>
+      <dl>
+        <div><dt>status</dt><dd>in development</dd></div>
+        <div><dt>latest note</dt><dd>testing deliberate role-reveal interaction</dd></div>
+      </dl>
+      {{ button('open devlog', '/game-lab/imposter', 'button--accent') }}
+    </aside>
+  </div>
+  <script type="application/json" id="game-library-data">{{ [
+    {'title':'Imposter','summary':'a multilingual phone-passing social-deduction game about questions, bluffing, and a card nobody should see.','status':'in development','note':'testing deliberate role-reveal interaction','route':'/game-lab/imposter','action':'open devlog'},
+    {'title':'Tower Defense','summary':'a Java learning project for object-oriented game-state, paths, towers, enemies, and scoring.','status':'completed learning project','note':'desktop prototype archived','route':'/game-lab/tower-defense','action':'open project'},
+    {'title':'slot_03.locked','summary':'next small idea, currently being prevented from becoming a second full-time job','status':'locked','note':'responsible scope management detected','route':none,'action':none}
+  ]|tojson }}</script>
+</section>
+{% endblock %}
+{% block page_scripts %}<script src="/assets/scripts/game-library.js" defer></script>{% endblock %}
