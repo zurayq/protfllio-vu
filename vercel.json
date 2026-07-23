@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "corepack enable && pnpm install --frozen-lockfile && python -m pip install --disable-pip-version-check -r requirements.txt",
-  "buildCommand": "pnpm build",
+  "installCommand": "corepack enable && pnpm install --frozen-lockfile && uv sync --frozen",
+  "buildCommand": "uv run python src/build.py --output dist --production",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
